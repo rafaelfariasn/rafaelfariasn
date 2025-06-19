@@ -1,6 +1,7 @@
 // app/layout.tsx
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,7 +22,9 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen items-center px-4">
           <header className="w-full max-w-2xl py-6">
             <h1 className="text-2xl font-bold text-center">
-              <a href="/">Technical Blog - Rafael de Farias Nascimento</a>
+               <Link href="/" className="hover:underline">
+                 Technical Blog – Rafael de Farias Nascimento
+              </Link>
             </h1>
           </header>
           <main className="w-full max-w-2xl flex-1 prose prose-lg">
