@@ -1,7 +1,8 @@
 import { getPostBySlug } from "@/lib/posts";
 import { notFound } from "next/navigation";
+type Params = Promise<{ slug: string }>;
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function BlogPostPage({ params }: { params: Params }) {
     const { slug } = await params;
     const post = getPostBySlug(slug);
 
